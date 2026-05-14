@@ -31,8 +31,10 @@ export default function LearningJourney() {
           <div className="space-y-6">
             {semesters.map((sem, i) => (
               <div key={i} className="relative flex gap-6 pl-10">
-                <div className={bsolute left-0 top-1.5 w-8 h-8 rounded-full border flex items-center justify-center flex-shrink-0 z-10 }>
-                  <div className={w-2 h-2 rounded-full } />
+                <div className="absolute left-0 top-1.5 w-8 h-8 rounded-full border flex items-center justify-center flex-shrink-0 z-10">
+
+                  <div className="w-2 h-2 rounded-full" />
+
                 </div>
                 <div className="flex-1 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-5">
                   <div className="flex flex-wrap items-center gap-2 mb-2">
