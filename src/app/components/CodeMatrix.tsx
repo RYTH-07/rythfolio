@@ -27,7 +27,7 @@ export default function CodeMatrix() {
                   <h3 className="font-semibold text-gray-900 dark:text-white">{platform.name}</h3>
                   <p className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">{platform.handle}</p>
                 </div>
-                <span className={w-2.5 h-2.5 rounded-full mt-1.5 } />
+                <span className={`w-2.5 h-2.5 rounded-full mt-1.5 ${platform.dot}`} />
               </div>
               <div className="grid grid-cols-2 gap-5">
                 {platform.metrics.map((m) => (
