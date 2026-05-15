@@ -10,7 +10,7 @@ const links = [
 const navLinks = [
   { label: "About", href: "#hero" },
   { label: "Projects", href: "#projects" },
-  { label: "Blog", href: "#blog" },
+  
   { label: "Contact", href: "#contact" },
 ];
 
@@ -52,4 +52,4 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+}

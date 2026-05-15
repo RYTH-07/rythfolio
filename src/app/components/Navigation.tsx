@@ -27,7 +27,7 @@ export default function Navigation() {
     { label: "About", href: "#hero" },
     { label: "Code Stats", href: "#code-matrix" },
     { label: "Projects", href: "#projects" },
-    { label: "Blog", href: "#blog" },
+    
     { label: "Contact", href: "#contact" },
   ];
 

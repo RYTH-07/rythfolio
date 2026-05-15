@@ -1,4 +1,5 @@
-import { ExternalLink } from "lucide-react";
+
+code = '''import { ExternalLink } from "lucide-react";
 
 export default function Certifications() {
   const certs = [
@@ -44,4 +45,7 @@ export default function Certifications() {
       </div>
     </section>
   );
-}
+}'''
+with open('src/app/components/Certifications.tsx', 'w', encoding='utf-8') as f:
+    f.write(code)
+print('Certifications done!')

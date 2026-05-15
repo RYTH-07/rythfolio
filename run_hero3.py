@@ -1,4 +1,6 @@
-import { motion } from "motion/react";
+﻿with open('write_hero3.py', 'w', encoding='utf-8') as s:
+    s.write(r"""
+code = '''import { motion } from "motion/react";
 import { ArrowRight, Github, Linkedin, ExternalLink } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 
@@ -36,13 +38,11 @@ function ParticleCanvas() {
         particles.slice(i + 1).forEach(b => {
           const dx = a.x - b.x, dy = a.y - b.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 120) { ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.strokeStyle = 
-gba(96,165,250,); ctx.lineWidth = 0.5; ctx.stroke(); }
+          if (dist < 120) { ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.strokeStyle = gba(96,165,250,); ctx.lineWidth = 0.5; ctx.stroke(); }
         });
         const dx = a.x - mouse.x, dy = a.y - mouse.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 150) { ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(mouse.x, mouse.y); ctx.strokeStyle = 
-gba(139,92,246,); ctx.lineWidth = 0.8; ctx.stroke(); }
+        if (dist < 150) { ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(mouse.x, mouse.y); ctx.strokeStyle = gba(139,92,246,); ctx.lineWidth = 0.8; ctx.stroke(); }
       });
       animId = requestAnimationFrame(draw);
     };
@@ -136,4 +136,8 @@ export default function Hero() {
       </div>
     </section>
   );
-}
+}'''
+with open('src/app/components/Hero.tsx', 'w', encoding='utf-8') as f:
+    f.write(code)
+print('Hero done!')
+""")
