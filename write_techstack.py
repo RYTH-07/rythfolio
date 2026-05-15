@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+﻿content = '''import { motion } from "motion/react";
 
 const skills = [
   { name: "Python", level: 70, color: "bg-blue-500" },
@@ -48,4 +48,7 @@ export default function TechStack() {
       </div>
     </section>
   );
-}
+}'''
+with open('src/app/components/TechStack.tsx', 'w', encoding='utf-8') as f:
+    f.write(content)
+print('TechStack done!')

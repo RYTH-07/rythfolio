@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+﻿content = '''import { motion } from "motion/react";
 import { ArrowRight, Github, Linkedin, ExternalLink, Download } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -98,4 +98,7 @@ export default function Hero() {
       </div>
     </section>
   );
-}
+}'''
+with open('src/app/components/Hero.tsx', 'w', encoding='utf-8') as f:
+    f.write(content)
+print('Hero done!')
