@@ -1,4 +1,6 @@
-import { useEffect, useState } from "react";
+﻿with open('write_heatmapfinal.py', 'w', encoding='utf-8') as s:
+    s.write("""
+code = '''import { useEffect, useState } from "react";
 
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const USERNAME = "RYTH-07";
@@ -38,14 +40,6 @@ export default function GitHubHeatmap() {
       .catch(() => setLoading(false));
   }, []);
 
-  const legendClasses = [
-    "bg-gray-100 dark:bg-gray-800",
-    "bg-blue-100 dark:bg-blue-900/40",
-    "bg-blue-200 dark:bg-blue-800/60",
-    "bg-blue-400 dark:bg-blue-600",
-    "bg-blue-600 dark:bg-blue-400",
-  ];
-
   return (
     <section id="github-heatmap" className="py-20 bg-white dark:bg-gray-950">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
@@ -61,8 +55,8 @@ export default function GitHubHeatmap() {
             </p>
             <div className="flex items-center gap-1.5 text-xs text-gray-400 dark:text-gray-500">
               <span>Less</span>
-              {legendClasses.map((cls, i) => (
-                <span key={i} className={"w-3 h-3 rounded-sm " + cls} />
+              {["bg-gray-100 dark:bg-gray-800", "bg-blue-100 dark:bg-blue-900/40", "bg-blue-200 dark:bg-blue-800/60", "bg-blue-400 dark:bg-blue-600", "bg-blue-600 dark:bg-blue-400"].map((cls, i) => (
+                <span key={i} className={w-3 h-3 rounded-sm } />
               ))}
               <span>More</span>
             </div>
@@ -104,4 +98,8 @@ export default function GitHubHeatmap() {
       </div>
     </section>
   );
-}
+}'''
+with open('src/app/components/GitHubHeatmap.tsx', 'w', encoding='utf-8') as f:
+    f.write(code)
+print('GitHubHeatmap final done!')
+""")

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+code = '''import { useEffect, useState } from "react";
 
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const USERNAME = "RYTH-07";
@@ -105,3 +105,8 @@ export default function GitHubHeatmap() {
     </section>
   );
 }
+'''
+
+with open('src/app/components/GitHubHeatmap.tsx', 'w', encoding='utf-8') as f:
+    f.write(code)
+print("GitHubHeatmap done!")
