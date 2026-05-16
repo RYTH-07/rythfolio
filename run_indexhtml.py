@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+﻿with open('write_indexhtml.py', 'w', encoding='utf-8') as s:
+    s.write("""
+code = '''<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,4 +16,8 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
-</html>
+</html>'''
+with open('index.html', 'w', encoding='utf-8') as f:
+    f.write(code)
+print('index.html updated!')
+""")
