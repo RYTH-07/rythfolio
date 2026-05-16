@@ -2,7 +2,7 @@ const items = [
   {
     year: "2026",
     category: "Hackathon",
-    title: "Flash 2.0 — 4th Place",
+    title: "Flash 2.0 -- 4th Place",
     description: "Built a fitness app prototype in under 4 hours at Amrita School of Computing, Chennai. Competed against teams across the college.",
   },
 ];
@@ -23,7 +23,7 @@ export default function Achievements() {
           </p>
           <h2 className="text-3xl font-semibold text-gray-900 dark:text-white">Achievements</h2>
           <p className="mt-3 text-gray-500 dark:text-gray-400 max-w-lg">
-            Hackathons, certifications, and awards — a timeline of key accomplishments.
+            Hackathons, certifications, and awards -- a timeline of key accomplishments.
           </p>
         </div>
         <div className="relative max-w-2xl">
@@ -51,4 +51,4 @@ export default function Achievements() {
       </div>
     </section>
   );
-}
+}

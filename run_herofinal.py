@@ -1,4 +1,6 @@
-import { motion } from "motion/react";
+﻿with open('write_herofinal.py', 'w', encoding='utf-8') as s:
+    s.write("""
+code = '''import { motion } from "motion/react";
 import { ArrowRight, Github, Linkedin, ExternalLink } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 import ErrorBoundary from "./ErrorBoundary";
@@ -162,7 +164,7 @@ export default function Hero() {
             </motion.div>
           </motion.div>
           <motion.div initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: 0.2 }} className="flex-shrink-0 relative">
-
+            <div className="absolute -inset-4 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl opacity-20 blur-xl animate-pulse" />
             <div className="relative w-56 h-56 sm:w-72 sm:h-72 rounded-2xl overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl">
               <img src="/Profile.jpeg" alt="C Rythan" className="w-full h-full object-cover" />
             </div>
@@ -176,7 +178,7 @@ export default function Hero() {
           </motion.div>
         </div>
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8 }} className="mt-16 pt-8 border-t border-gray-100 dark:border-gray-800 flex flex-wrap gap-8">
-          <div><p className="text-2xl font-semibold text-gray-900 dark:text-white">2</p><p className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">Projects</p></div>
+          <div><p className="text-2xl font-semibold text-gray-900 dark:text-white">1</p><p className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">Projects</p></div>
           <div><p className="text-2xl font-semibold text-gray-900 dark:text-white">12</p><p className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">Problems Solved</p></div>
           <div><p className="text-2xl font-semibold text-gray-900 dark:text-white">8.22</p><p className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">Sem 1 SGPA</p></div>
           <div><p className="text-2xl font-semibold text-gray-900 dark:text-white">1</p><p className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">Certification</p></div>
@@ -184,4 +186,8 @@ export default function Hero() {
       </div>
     </section>
   );
-}
+}'''
+with open('src/app/components/Hero.tsx', 'w', encoding='utf-8') as f:
+    f.write(code)
+print('Hero final done!')
+""")

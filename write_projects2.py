@@ -1,4 +1,5 @@
-import { ExternalLink, Github } from "lucide-react";
+
+code = '''import { ExternalLink, Github } from "lucide-react";
 
 export default function Projects() {
   const projects = [
@@ -52,4 +53,7 @@ export default function Projects() {
       </div>
     </section>
   );
-}
+}'''
+with open('src/app/components/Projects.tsx', 'w', encoding='utf-8') as f:
+    f.write(code)
+print('Projects done!')
