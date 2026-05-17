@@ -1,4 +1,5 @@
-import { StrictMode } from 'react'
+
+code = '''import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { inject } from '@vercel/analytics'
 import './styles/fonts.css'
@@ -14,4 +15,7 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <App />
   </StrictMode>
-)
+)'''
+with open('src/main.tsx', 'w', encoding='utf-8') as f:
+    f.write(code)
+print('main.tsx fixed!')
