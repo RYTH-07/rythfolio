@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+code = '''import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { Github, Linkedin, Mail, Instagram, Send, CheckCircle, XCircle } from "lucide-react";
 import { motion } from "motion/react";
@@ -150,3 +150,8 @@ export default function Contact() {
     </section>
   );
 }
+'''
+
+with open('src/app/components/Contact.tsx', 'w', encoding='utf-8') as f:
+    f.write(code)
+print("Contact done!")

@@ -1,4 +1,4 @@
-import Navigation from "./components/Navigation";
+code = '''import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
 import CodeMatrix from "./components/CodeMatrix";
 import GitHubHeatmap from "./components/GitHubHeatmap";
@@ -39,3 +39,8 @@ export default function App() {
     </div>
   );
 }
+'''
+
+with open('src/app/App.tsx', 'w', encoding='utf-8') as f:
+    f.write(code)
+print("App.tsx done!")
