@@ -22,7 +22,7 @@ export default function CodeMatrix() {
   }, []);
 
   const platforms = [
-    { name: "GeeksforGeeks", handle: "@C RYTHAN", href: "https://www.geeksforgeeks.org/user/crythan/", dot: "bg-green-500" },
+    { name: "GeeksforGeeks", handle: "@C RYTHAN", href: "https://www.geeksforgeeks.org/profile/rythcomra12?tab=activity", dot: "bg-green-500" },
     { name: "HackerRank", handle: "@rythcomputes", href: "https://www.hackerrank.com/profile/rythcomputes", dot: "bg-emerald-500" },
     { name: "Codolio", handle: "@C RYTHAN", href: "https://codolio.com/profile/C%20RYTHAN", dot: "bg-blue-500" },
   ];
