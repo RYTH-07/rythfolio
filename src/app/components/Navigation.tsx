@@ -29,6 +29,7 @@ export default function Navigation() {
     { label: "Projects", href: "#projects" },
     
     { label: "Contact", href: "#contact" },
+    { label: "Guestbook", href: "#guestbook" },
   ];
 
   const scrollTo = (href: string) => {

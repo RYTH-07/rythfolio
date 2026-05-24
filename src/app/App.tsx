@@ -5,10 +5,11 @@ import GitHubHeatmap from "./components/GitHubHeatmap";
 import Achievements from "./components/Achievements";
 import Certifications from "./components/Certifications";
 import Projects from "./components/Projects";
-import TechStack from "./components/TechStack";
+import SkillsGlobe from "./components/SkillsGlobe";
 import CurrentlyLearning from "./components/CurrentlyLearning";
 import LearningJourney from "./components/LearningJourney";
 import Contact from "./components/Contact";
+import Guestbook from "./components/Guestbook";
 import Footer from "./components/Footer";
 import SideNav from "./components/SideNav";
 import ScrollToTop from "./components/ScrollToTop";
@@ -23,7 +24,7 @@ export default function App() {
       <SideNav />
       <main className="pb-16 lg:pb-0">
         <Hero />
-        <TechStack />
+        <SkillsGlobe />
         <CodeMatrix />
         <GitHubHeatmap />
         <Projects />
@@ -32,6 +33,7 @@ export default function App() {
         <LearningJourney />
         <CurrentlyLearning />
         <Contact />
+        <Guestbook />
       </main>
       <Footer />
       <ScrollToTop />
