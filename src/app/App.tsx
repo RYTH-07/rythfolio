@@ -13,13 +13,17 @@ import Guestbook from "./components/Guestbook";
 import Footer from "./components/Footer";
 import SideNav from "./components/SideNav";
 import ScrollToTop from "./components/ScrollToTop";
+import CursorSpotlight from "./components/CursorSpotlight";
 import ProgressBar from "./components/ProgressBar";
+import PageLoader from "./components/PageLoader";
 import MobileBottomNav from "./components/MobileBottomNav";
 
 export default function App() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 overflow-x-hidden">
+      <PageLoader />
       <ProgressBar />
+      <CursorSpotlight />
       <Navigation />
       <SideNav />
       <main className="pb-16 lg:pb-0">
