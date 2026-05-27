@@ -6,16 +6,16 @@ export default function CodeMatrix() {
   useEffect(() => {
     async function fetchLeetCode() {
       try {
-        const res = await fetch("https://alfa-leetcode-api.onrender.com/Vvhq82c4cV/solved?nocache=" + Date.now());
+        const res = await fetch("https://alfa-leetcode-api.onrender.com/RYTH-07/solved?nocache=" + Date.now());
         const data = await res.json();
         if (data.solvedProblem && data.solvedProblem > 0) {
           setLeetCount(data.solvedProblem);
         } else {
-          setLeetCount(12); // fallback
+          setLeetCount(13); // fallback
         }
       } catch (err) {
         console.error("Failed to fetch LeetCode stats:", err);
-        setLeetCount(12); // fallback
+        setLeetCount(13); // fallback
       }
     }
     fetchLeetCode();
