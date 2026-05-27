@@ -45,7 +45,7 @@ export default function CodeMatrix() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <a
-            href="https://leetcode.com/u/Vvhq82c4cV/"
+            href="https://leetcode.com/u/RYTH-07"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 p-6 hover:shadow-md hover:border-blue-300 dark:hover:border-blue-700 transition-all cursor-pointer block no-underline"
@@ -53,12 +53,12 @@ export default function CodeMatrix() {
             <div className="flex items-start justify-between mb-4">
               <div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">LeetCode</h3>
-                <p className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">@Vvhq82c4cV</p>
+                <p className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">RYTH-07</p>
               </div>
               <span className="w-2.5 h-2.5 rounded-full mt-1.5 bg-orange-400" />
             </div>
             <img
-              src="https://leetcard.jacoblin.cool/Vvhq82c4cV?theme=dark&font=Poppins&ext=contest"
+              src="https://leetcard.jacoblin.cool/RYTH-07?theme=dark&font=Poppins&ext=contest"
               alt="LeetCode Stats"
               className="w-full rounded-lg"
             />
