@@ -29,7 +29,7 @@ export default function CodeMatrix() {
 
   const totalStats = [
     { platform: "LeetCode", solved: leetCount, color: "text-orange-400" },
-    { platform: "GeeksforGeeks", solved: 2, color: "text-green-500" },
+    { platform: "GeeksforGeeks", solved: 6, color: "text-green-500" },
     { platform: "HackerRank", solved: 4, color: "text-emerald-500" },
   ];
 
