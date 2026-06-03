@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+code = '''import { useEffect, useRef, useState } from "react";
 
 export default function CustomCursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
@@ -69,3 +69,8 @@ export default function CustomCursor() {
     </div>
   );
 }
+'''
+
+with open('src/app/components/CustomCursor.tsx', 'w', encoding='utf-8') as f:
+    f.write(code)
+print("Neon rocket cursor done!")
