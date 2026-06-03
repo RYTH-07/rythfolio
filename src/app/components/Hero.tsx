@@ -222,8 +222,8 @@ export default function Hero() {
         </div>
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8 }} className="mt-16 pt-8 border-t border-gray-100 dark:border-gray-800 flex flex-wrap gap-8">
           {[
-            { value: 2, label: "Projects", suffix: "" },
-            { value: 12, label: "Problems Solved", suffix: "+" },
+            { value: 3, label: "Projects", suffix: "" },
+            { value: 30, label: "Problems Solved", suffix: "+" },
             { value: 8.22, label: "Sem 1 SGPA", suffix: "", decimal: true },
             { value: 1, label: "Certification", suffix: "" },
           ].map((stat, i) => (

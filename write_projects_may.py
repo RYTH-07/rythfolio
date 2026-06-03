@@ -1,4 +1,4 @@
-import { ExternalLink, Github } from "lucide-react";
+code = '''import { ExternalLink, Github } from "lucide-react";
 import { motion } from "motion/react";
 
 export default function Projects() {
@@ -91,3 +91,8 @@ export default function Projects() {
     </section>
   );
 }
+'''
+
+with open('src/app/components/Projects.tsx', 'w', encoding='utf-8') as f:
+    f.write(code)
+print("Projects updated with MAY!")

@@ -14,6 +14,7 @@ import Footer from "./components/Footer";
 import SideNav from "./components/SideNav";
 import ScrollToTop from "./components/ScrollToTop";
 import CursorSpotlight from "./components/CursorSpotlight";
+import CustomCursor from "./components/CustomCursor";
 import ProgressBar from "./components/ProgressBar";
 import PageLoader from "./components/PageLoader";
 import MobileBottomNav from "./components/MobileBottomNav";
@@ -24,6 +25,7 @@ export default function App() {
       <PageLoader />
       <ProgressBar />
       <CursorSpotlight />
+      <CustomCursor />
       <Navigation />
       <SideNav />
       <main className="pb-16 lg:pb-0">

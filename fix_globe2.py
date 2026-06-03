@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+code = '''import { useEffect, useRef, useState } from "react";
 
 const skills = [
   { name: "Python", color: "#3b82f6", current: true, size: 14 },
@@ -236,3 +236,8 @@ export default function SkillsGlobe() {
     </section>
   );
 }
+'''
+
+with open('src/app/components/SkillsGlobe.tsx', 'w', encoding='utf-8') as f:
+    f.write(code)
+print("Enhanced SkillsGlobe done!")
