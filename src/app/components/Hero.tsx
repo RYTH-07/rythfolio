@@ -2,8 +2,9 @@ import { motion } from "motion/react";
 import { ArrowRight, Github, Linkedin, ExternalLink } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 
-function CountUp({ value, label, suffix, decimal, delay }: { value: number; label: string; suffix: string; decimal?: boolean; delay: number }) {
+function CountUp({ value, label, suffix, decimal, delay, special }: { value: number; label: string; suffix: string; decimal?: boolean; delay: number; special?: boolean }) {
   const [count, setCount] = useState(0);
+  const [done, setDone] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const started = useRef(false);
 
@@ -11,7 +12,7 @@ function CountUp({ value, label, suffix, decimal, delay }: { value: number; labe
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting && !started.current) {
         started.current = true;
-        const duration = 1500;
+        const duration = 1800;
         const steps = 60;
         const increment = value / steps;
         let current = 0;
@@ -19,6 +20,7 @@ function CountUp({ value, label, suffix, decimal, delay }: { value: number; labe
           current += increment;
           if (current >= value) {
             setCount(value);
+            setDone(true);
             clearInterval(timer);
           } else {
             setCount(decimal ? Math.round(current * 100) / 100 : Math.floor(current));
@@ -29,6 +31,26 @@ function CountUp({ value, label, suffix, decimal, delay }: { value: number; labe
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
   }, [value, decimal]);
+
+  if (special) {
+    return (
+      <div ref={ref} className="relative">
+        <div className={`relative inline-block transition-all duration-500 ${done ? "scale-110" : "scale-100"}`}>
+          <p className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-blue-500 bg-clip-text text-transparent"
+            style={{
+              filter: done ? "drop-shadow(0 0 8px rgba(139,92,246,0.6))" : "none",
+              transition: "filter 0.5s ease",
+            }}>
+            {decimal ? count.toFixed(2) : count}{suffix}
+          </p>
+          {done && (
+            <span className="absolute -top-1 -right-3 text-yellow-400 text-xs animate-bounce">✦</span>
+          )}
+        </div>
+        <p className="text-xs text-blue-400 dark:text-blue-400 mt-0.5 font-medium">{label}</p>
+      </div>
+    );
+  }
 
   return (
     <div ref={ref}>
@@ -224,7 +246,7 @@ export default function Hero() {
           {[
             { value: 3, label: "Projects", suffix: "" },
             { value: 30, label: "Problems Solved", suffix: "+" },
-            { value: 8.48, label: "CGPA", suffix: "", decimal: true },
+            { value: 8.48, label: "CGPA", suffix: "", decimal: true, special: true },
             { value: 1, label: "Certification", suffix: "" },
           ].map((stat, i) => (
             <CountUp key={stat.label} {...stat} delay={0.9 + i * 0.1} />
