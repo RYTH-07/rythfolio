@@ -224,7 +224,7 @@ export default function Hero() {
           {[
             { value: 3, label: "Projects", suffix: "" },
             { value: 30, label: "Problems Solved", suffix: "+" },
-            { value: 8.22, label: "Sem 1 SGPA", suffix: "", decimal: true },
+            { value: 8.48, label: "CGPA", suffix: "", decimal: true },
             { value: 1, label: "Certification", suffix: "" },
           ].map((stat, i) => (
             <CountUp key={stat.label} {...stat} delay={0.9 + i * 0.1} />

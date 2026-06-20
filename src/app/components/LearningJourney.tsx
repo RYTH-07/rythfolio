@@ -3,16 +3,16 @@ export default function LearningJourney() {
     {
       label: "Semester 2",
       year: "2025-26",
-      current: true,
+      current: false,
       title: "OOP, Math & Physics",
-      description: "OOP in Java (classes, objects, inheritance, interfaces, exception handling), Discrete Mathematics (recurrence relations, graph theory, relations), Linear Algebra (vector spaces, eigenvalues, transformations), Modern Physics (quantum mechanics, wave functions), User Interface Design (HTML, CSS, JavaScript).",
+      description: "OOP in Java (classes, objects, inheritance, interfaces, exception handling), Discrete Mathematics (recurrence relations, graph theory, relations), Linear Algebra (vector spaces, eigenvalues, transformations), Modern Physics (quantum mechanics, wave functions), User Interface Design (HTML, CSS, JavaScript). SGPA: 8.67.",
     },
     {
       label: "Semester 1",
       year: "2024-25",
       current: false,
       title: "Programming Foundations",
-      description: "Python programming fundamentals, problem solving, basic data structures, and introductory computer science concepts. SGPA: 8.22.",
+      description: "Python programming fundamentals, problem solving, basic data structures, and introductory computer science concepts. SGPA: 8.22. CGPA after Sem 2: 8.48.",
     },
   ];
 
