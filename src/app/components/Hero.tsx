@@ -63,7 +63,7 @@ function CountUp({ value, label, suffix, decimal, delay, special }: { value: num
 }
 import ErrorBoundary from "./ErrorBoundary";
 
-const roles = ["CS Student", "ML Enthusiast", "NLP Explorer", "Problem Solver", "Open Source Builder"];
+const roles = ["Sophomore CSE Student", "ML Enthusiast", "NLP Explorer", "Problem Solver", "Open Source Builder"];
 const badges = ["Python", "Java", "React", "DSA", "LLMs", "Git", "NLP", "Flask"];
 
 function ParticleCanvas() {
@@ -199,7 +199,7 @@ export default function Hero() {
               </span>
             </motion.h1>
             <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.35 }} className="text-lg text-gray-500 dark:text-gray-400 mb-8 leading-relaxed max-w-lg">
-              B.Tech CSE student at Amrita School of Computing, Chennai. Passionate about LLMs, NLP, and building things that matter.
+              Sophomore @ Amrita School of Computing, Chennai. Passionate about LLMs, NLP, and building things that matter.
             </motion.p>
             <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45 }} className="flex flex-col sm:flex-row gap-3 mb-8">
               <button onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })} className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors text-sm font-medium shadow-lg shadow-blue-500/25">
