@@ -30,7 +30,7 @@ export default function CodeMatrix() {
   const totalStats = [
     { platform: "LeetCode", solved: leetCount, color: "text-orange-400" },
     { platform: "GeeksforGeeks", solved: 6, color: "text-green-500" },
-    { platform: "HackerRank", solved: 4, color: "text-emerald-500" },
+    { platform: "HackerRank", solved: 13, color: "text-emerald-500" },
   ];
 
   const total = totalStats.reduce((sum, p) => sum + p.solved, 0);
