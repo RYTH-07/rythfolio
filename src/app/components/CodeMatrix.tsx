@@ -5,18 +5,36 @@ export default function CodeMatrix() {
 
   useEffect(() => {
     async function fetchLeetCode() {
-      try {
-        const res = await fetch("https://alfa-leetcode-api.onrender.com/RYTH-07/solved?nocache=" + Date.now());
-        const data = await res.json();
-        if (data.solvedProblem && data.solvedProblem > 0) {
-          setLeetCount(data.solvedProblem);
-        } else {
-          setLeetCount(13); // fallback
+      // Try multiple APIs, use first valid response
+      const apis = [
+        {
+          url: "https://leetcode-stats-api.herokuapp.com/RYTH-07",
+          parse: (d: any) => d.totalSolved > 0 ? d.totalSolved : null,
+        },
+        {
+          url: "https://alfa-leetcode-api.onrender.com/RYTH-07/solved?nocache=" + Date.now(),
+          parse: (d: any) => d.solvedProblem > 0 ? d.solvedProblem : null,
+        },
+      ];
+
+      for (const api of apis) {
+        try {
+          const controller = new AbortController();
+          const timeout = setTimeout(() => controller.abort(), 5000);
+          const res = await fetch(api.url, { signal: controller.signal });
+          clearTimeout(timeout);
+          const data = await res.json();
+          const count = api.parse(data);
+          if (count && count > 13) {
+            setLeetCount(count);
+            return;
+          }
+        } catch {
+          continue;
         }
-      } catch (err) {
-        console.error("Failed to fetch LeetCode stats:", err);
-        setLeetCount(13); // fallback
       }
+      // If both fail use hardcoded current count
+      setLeetCount(32);
     }
     fetchLeetCode();
   }, []);
