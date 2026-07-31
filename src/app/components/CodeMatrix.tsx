@@ -34,7 +34,7 @@ export default function CodeMatrix() {
         }
       }
       // If both fail use hardcoded current count
-      setLeetCount(32);
+      setLeetCount(45);
     }
     fetchLeetCode();
   }, []);
@@ -47,7 +47,7 @@ export default function CodeMatrix() {
 
   const totalStats = [
     { platform: "LeetCode", solved: leetCount, color: "text-orange-400" },
-    { platform: "GeeksforGeeks", solved: 6, color: "text-green-500" },
+    { platform: "GeeksforGeeks", solved: 8, color: "text-green-500" },
     { platform: "HackerRank", solved: 13, color: "text-emerald-500" },
   ];
 
